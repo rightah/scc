@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  
+    <title>쇼핑몰| 주문페이지</title>
+    <style>
+        .mytitle {
+            color: white;
+            height: 350px;
+            background-image: url('https://post-phinf.pstatic.net/MjAyMDAxMjlfMzAw/MDAxNTgwMjgxMDEwMjM0.ut5h182WGm3ZLE820_v3Mi2Z_wxGk7OhTCXzE68tZWAg.Z9rDLCs9-kO0AanG3a6D7GHHeWHITiHKKCANmqUNApQg.JPEG/01.jpg?type=w1200');
+            background-position: center;
+            background-size: cover;
+            margin: 50px auto;
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+            padding-top: 20px;
+        }
+    
+        .contents {
+            margin: 20px auto;
+            width: 600px;
+            padding: 0px;
+            text-align: center;
+            padding-top: 0px;
+            font-family: 'Poor Story', cursive;
+        }
+        
+        .input{ 
+            margin: 20px auto;
+            width: 600px;
+            padding: 0px;
+            text-align: center;
+            padding-top: 0px;
+            font-family: 'Poor Story', cursive;
+            }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <script>
+        function hey(){
+	        alert('주문이 완료되었습니다.');
+        }
+
+        // $(document).ready(function(){
+        //     alert('다 로딩됐다!')
+        //     q2();
+        // });
+
+        function q1() {
+         
+         let value1 = $('#name_id').val();
+         let value2 = $('#count_id').val();
+         let value3 = $('#address_id').val();
+         let value4 = $('#number_id').val();
+
+         if (value1 == '') {
+             alert('성함을 입력하세요!');
+             $('#name_id').foucs();
+             return
+         }else if  (value2 == 'none') {
+             alert('수량을 선택하세요!'); 
+             $('#count_id').foucs();
+             return
+         }else if (value3== '') {
+             alert('주소을 입력하세요!');
+             $('#address_id').foucs();
+             return
+         }else if (value4 == '') {
+             alert('전화번호를 입력하세요!');
+             $('#number_id').foucs();
+             return }
+         }
+     
+
+        // function q2() {
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "https://api.manana.kr/exchange/rate.json",
+        //         data: {},
+        //         success: function (response) {
+        //             for (let i=0, i < response.length; i++) {
+        //                 if (response[i]['name'] == 'USDKRW=X'){
+        //                     $('#exchange').text(response[i]['rate']);
+        //                     return;
+        //                 }
+        //             }
+        //             // let exchange_list = response[1][2];
+        //             // console.log($('#names-q1'))}
+        //         }
+        //     })
+        // }   
+    </script>
+</head>
+
+<body>
+    
+     <div class="mytitle">
+     </div>
+    
+
+    <div class="contents">
+        <div class="alert alert-success" role="alert">
+            <h2>상품제목</h2> <h2>가격: 1,000,000원/ 개</h2>
+            [혁오의 다섯 번째 앨범: 사랑으로]
+            혁오가 <24: How to find true love and happiness>이후 1년 만에 새 앨범 <사랑으로>로 돌아왔다.
+        </div>  
+        <div>
+        "달러-원 환율: "
+        <span id="exchange">1240.58</span>
+        </div>
+    </div>
+    <div class ="input">
+        <p>
+            <h2>주문하기</h2>
+        </p>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">주문자 성함</span>
+        </div>
+        <input type="text" class="form-control" id = "name-id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>--수량을 선택하세요--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+            </div>
+            <input type="text" class="form-control" id = "address_id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+            </div>
+            <input type="text" class="form-control" id = "number_id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button onclick="q1()" type="button" class="btn btn-success">주문하기</button>
+    
+    </div> 
+    
+</body>
+
+</html>
